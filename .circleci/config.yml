@@ -18,6 +18,6 @@ jobs:
           command: msbuild DemoApp.sln
       - run:
           name: "Compress"
-          command: Compress-Archive -Path ConsoleApp1\bin -Update -DestinationPath Artifact\Piggy.Zip                   
+          command: Compress-Archive -Path ConsoleApp1\bin -Update -DestinationPath .\Artifact\Piggy.Zip                   
       - store_artifacts:
-          path: Artifact\
+          path: .\Artifact\
