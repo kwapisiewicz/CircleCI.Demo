@@ -12,9 +12,9 @@ jobs:
       - checkout
       - run:
           name: "Install project dependencies"
-          command: nuget restore DemoApp\DemoApp.sln
+          command: nuget restore DemoApp.sln
       - run:
           name: "Run Build step"
-          command: msbuild DemoApp\DemoApp.sln
+          command: msbuild DemoApp.sln
       - store_artifacts:
-          path: .\DemoApp\DemoApp\bin
+          path: ConsoleApp1\bin
