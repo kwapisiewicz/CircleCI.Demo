@@ -9,8 +9,7 @@ jobs:
       name: win/vs2019
       shell: powershell.exe
     steps:
-      - checkout
       - run:
           name: "Install project dependencies"
-          command: echo 'export $CIRCLE_BUILD_NUM' >> $aaa ; Write-Host "Hello $aaa"
+          command: echo ${CIRCLE_BRANCH}
 
