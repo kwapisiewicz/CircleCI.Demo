@@ -12,5 +12,5 @@ jobs:
       - checkout
       - run:
           name: "Install project dependencies"
-          command: $echo $CIRCLE_BUILD_NUM; Write-Host "Hello $CIRCLE_BUILD_NUM"
+          command: echo $CIRCLE_BUILD_NUM; Write-Host "Hello $CIRCLE_BUILD_NUM"
 
