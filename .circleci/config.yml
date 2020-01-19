@@ -10,4 +10,4 @@ jobs:
       shell: powershell.exe
     steps:
       - run: echo "<< pipeline.project.type >> 1.<< pipeline.git.branch >>.<< pipeline.number>>"
-      - run: $number = "<< pipeline.number >>"; $branch = "<< pipeline.git.branch >>"; "$branch.$number"; echo "$branch.$number
+      - run: $number = "<< pipeline.number >>"; $branch = "<< pipeline.git.branch >>"; "$branch.$number"; echo "$branch.$number"
