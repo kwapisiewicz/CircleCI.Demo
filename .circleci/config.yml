@@ -18,7 +18,7 @@ jobs:
           # command: msbuild DemoApp.sln
       - run:
           name: "Run version step" 
-          command: echo $CIRCLE_BRANCH | echo $CIRCLE_BUILD_NUM_DOCKER         
+          command: echo $CIRCLE_BRANCH
       # - run:
           # name: "Compress"
           # command: New-Item -ItemType "directory" -Path "Artifacts" -force; Compress-Archive -Path ConsoleApp1\bin -Update -DestinationPath .\Artifacts\Piggy.Zip; $CIRCLE_BUILD_NUM_DOCKER
