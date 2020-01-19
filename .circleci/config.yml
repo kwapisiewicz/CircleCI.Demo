@@ -9,19 +9,19 @@ jobs:
       name: win/vs2019
       shell: powershell.exe
     steps:
-      - checkout
-      - run:
-          name: "Install project dependencies"
-          command: nuget restore DemoApp.sln
-      - run:
-          name: "Run Build step"
-          command: msbuild DemoApp.sln
+      # - checkout
+      # - run:
+          # name: "Install project dependencies"
+          # command: nuget restore DemoApp.sln
+      # - run:
+          # name: "Run Build step"
+          # command: msbuild DemoApp.sln
       - run:
           name: "Run version step"
-          command: CIRCLE_BUILD_NUM_DOCKER=${CIRCLE_BUILD_NUM}
-echo ${CIRCLE_BUILD_NUM_DOCKER}          
-      - run:
-          name: "Compress"
-          command: New-Item -ItemType "directory" -Path "Artifacts" -force; Compress-Archive -Path ConsoleApp1\bin -Update -DestinationPath .\Artifacts\Piggy.Zip; $CIRCLE_BUILD_NUM_DOCKER
-      - store_artifacts:
-          path: .\Artifacts\
+          command: echo $CIRCLE_BRANCH 
+echo $CIRCLE_BUILD_NUM_DOCKER         
+      # - run:
+          # name: "Compress"
+          # command: New-Item -ItemType "directory" -Path "Artifacts" -force; Compress-Archive -Path ConsoleApp1\bin -Update -DestinationPath .\Artifacts\Piggy.Zip; $CIRCLE_BUILD_NUM_DOCKER
+      # - store_artifacts:
+          # path: .\Artifacts\
