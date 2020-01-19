@@ -9,8 +9,5 @@ jobs:
       name: win/vs2019
       shell: powershell.exe
     steps:
-      - run: echo "This is pipeline ID << pipeline.number >>"
-      - run: echo "This is pipeline ID << pipeline.project.type >>"
-      - run: echo "This is pipeline ID << pipeline.git.branch >>"
-      - run: echo "1.<< pipeline.git.branch >>.<< pipeline.number>>"
-      - run: $number = "<< pipeline.number >>"; $branch = "<< pipeline.git.branch >>"; $branch.$number; echo $branch.$number
+      - run: echo "<< pipeline.project.type >> 1.<< pipeline.git.branch >>.<< pipeline.number>>"
+      - run: $number = "<< pipeline.number >>"; $branch = "<< pipeline.git.branch >>"; "$branch.$number"; echo "$branch.$number
