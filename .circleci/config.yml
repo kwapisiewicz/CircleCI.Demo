@@ -12,5 +12,6 @@ jobs:
       - run: echo "This is pipeline ID << pipeline.number >>"
       - run: echo "This is pipeline ID << pipeline.project.type >>"
       - run: echo "This is pipeline ID << pipeline.git.branch >>"
-      - run: echo "pipeline.number; pipeline.number""
-      - run: "pipeline.git.branch\.pipeline.number""
+      - run: echo "pipeline.number; pipeline.number"
+      - run: "pipeline.git.branch\.pipeline.number"
+      - run: $builsString = "pipeline.git.branch\.pipeline.number"; $buildString
