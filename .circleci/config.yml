@@ -10,3 +10,9 @@ jobs:
       shell: powershell.exe
     steps:
       - checkout
+      - run:
+          name: "Install project dependencies"
+          command: nuget restore DemoApp.sln
+      - run:
+          name: "Run Build step"
+          command: msbuild DemoApp.sln    
