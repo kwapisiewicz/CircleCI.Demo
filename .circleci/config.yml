@@ -16,5 +16,4 @@ jobs:
       - run: echo "This is pipeline ID << pipeline.number >>"
       - run: echo "This is pipeline ID << pipeline.project.type >>"
       - run: echo "This is pipeline ID << pipeline.git.branch >>"
-      - run: echo "This is pipeline ID << CIRCLE_COMPARE_URL >>"
       - run: echo $pipeline.number
