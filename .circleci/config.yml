@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run:
           name: "Install project dependencies"
-          command: $a = 1
+          command: $a = 1; echo $a; $a
       - run:
           name: "Run Build step"
           command: $a  
