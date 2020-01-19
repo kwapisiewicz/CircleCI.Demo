@@ -10,9 +10,3 @@ jobs:
       shell: powershell.exe
     steps:
       - checkout
-      - run:
-          name: "Run version step" 
-          command: $CIRCLE_BRANCH
-       - run:
-          name: "Run version step2" 
-          command: $CIRCLE_WORKFLOW_I     
