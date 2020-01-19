@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run:
           name: "Install project dependencies"
-          command: nuget restore DemoApp.sln
+          command: $a = 1
       - run:
           name: "Run Build step"
-          command: msbuild DemoApp.sln    
+          command: $a  
